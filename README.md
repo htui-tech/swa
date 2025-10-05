@@ -35,7 +35,7 @@ swa/
 │   ├── template/          # 模板管理
 │   └── config/            # 配置管理
 ├── plugins/               # 插件目录
-│   ├── gov-site/          # 政府网站插件
+│   ├── bas-site/          # 基础网站插件
 │   ├── sdk/               # 插件开发SDK
 │   └── docs/              # 插件开发文档
 ├── dist/                  # 构建输出目录
@@ -187,7 +187,7 @@ ip_access_control:
 cargo build
 
 # 构建插件 (debug模式)
-./build-plugin-simple.sh macos gov-site debug
+./build-plugin-simple.sh macos bas-site debug
 ```
 
 ### 生产构建
@@ -197,17 +197,17 @@ cargo build
 cargo build --release
 
 # 构建插件 (release模式)
-./build-plugin-simple.sh macos gov-site release
+./build-plugin-simple.sh macos bas-site release
 ```
 
 ### 跨平台构建
 
 ```bash
 # Linux musl
-./build-plugin-simple.sh linux gov-site release
+./build-plugin-simple.sh linux bas-site release
 
 # macOS ARM64
-./build-plugin-simple.sh macos-arm gov-site release
+./build-plugin-simple.sh macos-arm bas-site release
 ```
 
 ## 📊 中间件系统
@@ -285,7 +285,7 @@ tail -f logs/$(date +%Y%m%d)/query_swa.log
 cargo run --bin swa -- --config config.yaml --debug
 
 # 构建调试版本插件
-./build-plugin-simple.sh macos gov-site debug
+./build-plugin-simple.sh macos bas-site debug
 ```
 
 ## 📚 文档资源
